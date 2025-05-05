@@ -1,0 +1,75 @@
+2025-05-05 22:20:55 - Log - INFO - Mongodb connected
+2025-05-05 22:21:03 - Log - INFO - Mongodb connected
+2025-05-05 22:25:03 - Log - INFO - Mongodb connected
+2025-05-05 22:25:40 - Log - INFO - Mongodb connected
+2025-05-05 22:26:03 - Log - INFO - Attempting to delete user with ID: 681904503bcee1ca2324d4ee
+2025-05-05 22:26:03 - Log - INFO - Successfully deleted user with ID: 681904503bcee1ca2324d4ee
+2025-05-05 22:26:03 - Log - INFO - Deleted 0 associated posts
+2025-05-05 22:26:03 - Log - CRITICAL - Error deleting user 681904503bcee1ca2324d4ee: from_mongo
+Traceback (most recent call last):
+  File "/home/nati/Videos/projects/instagram_scraper/router/instagram_users.py", line 104, in delete_user
+    "deleted_user": UserResponse.from_mongo(existing_user),
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nati/Videos/projects/instagram_scraper/.venv/lib/python3.11/site-packages/pydantic/_internal/_model_construction.py", line 271, in __getattr__
+    raise AttributeError(item)
+AttributeError: from_mongo
+2025-05-05 22:26:29 - Log - INFO - Mongodb connected
+2025-05-05 22:26:34 - Log - INFO - Attempting to delete user with ID: 681904503bcee1ca2324d4ee
+2025-05-05 22:26:34 - Log - WARNING - User not found with ID: 681904503bcee1ca2324d4ee
+2025-05-05 22:26:47 - Log - INFO - Attempting to delete user with ID: 6819050f0d0c5a4f561e4820
+2025-05-05 22:26:47 - Log - INFO - Successfully deleted user with ID: 6819050f0d0c5a4f561e4820
+2025-05-05 22:26:47 - Log - INFO - Deleted 0 associated posts
+2025-05-05 22:27:48 - Log - INFO - Mongodb connected
+2025-05-05 22:28:11 - Log - INFO - Mongodb connected
+2025-05-05 22:28:13 - Log - INFO - Mongodb connected
+2025-05-05 22:28:28 - Log - INFO - Attempting to delete user with ID: 6819050f0d0c5a4f561e4820
+2025-05-05 22:28:28 - Log - WARNING - User not found with ID: 6819050f0d0c5a4f561e4820
+2025-05-05 22:28:46 - Log - INFO - Attempting to delete user with ID: 68190bcb2ccb9cf18d69bf75
+2025-05-05 22:28:46 - Log - CRITICAL - Error deleting user 68190bcb2ccb9cf18d69bf75: 'DeleteResult' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/nati/Videos/projects/instagram_scraper/router/instagram_users.py", line 93, in delete_user
+    result['_id']=str(result['_id'])
+                      ~~~~~~^^^^^^^
+TypeError: 'DeleteResult' object is not subscriptable
+2025-05-05 22:29:05 - Log - INFO - Mongodb connected
+2025-05-05 22:29:22 - Log - INFO - Attempting to delete user with ID: 68190c682bec43c9e4a72986
+2025-05-05 22:29:22 - Log - CRITICAL - Error deleting user 68190c682bec43c9e4a72986: 'DeleteResult' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/nati/Videos/projects/instagram_scraper/router/instagram_users.py", line 93, in delete_user
+    result['_id']=str(result['_id'])
+                      ~~~~~~^^^^^^^
+TypeError: 'DeleteResult' object is not subscriptable
+2025-05-05 22:29:49 - Log - INFO - Mongodb connected
+2025-05-05 22:30:04 - Log - INFO - Attempting to delete user with ID: 68190c0c8cbf6581fc4b03e4
+2025-05-05 22:30:04 - Log - INFO - Successfully deleted user with ID: 68190c0c8cbf6581fc4b03e4
+2025-05-05 22:30:04 - Log - INFO - Deleted 0 associated posts
+2025-05-05 22:30:44 - Log - INFO - Mongodb connected
+2025-05-05 22:30:56 - Log - INFO - Attempting to delete user with ID: 68190c47c5b7af281a99a661
+2025-05-05 22:30:56 - Log - CRITICAL - Error deleting user 68190c47c5b7af281a99a661: 'DeleteResult' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/nati/Videos/projects/instagram_scraper/router/instagram_users.py", line 93, in delete_user
+    result['_id']=str(result['_id'])
+                      ~~~~~~^^^^^^^
+TypeError: 'DeleteResult' object is not subscriptable
+2025-05-05 22:31:48 - Log - INFO - Mongodb connected
+2025-05-05 22:32:33 - Log - INFO - Mongodb connected
+2025-05-05 22:32:53 - Log - INFO - Attempting to delete user with ID: 6819046b3bcee1ca2324d4ef
+2025-05-05 22:32:53 - Log - CRITICAL - Error deleting user 6819046b3bcee1ca2324d4ef: 'dict' object has no attribute '_id'
+Traceback (most recent call last):
+  File "/home/nati/Videos/projects/instagram_scraper/router/instagram_users.py", line 84, in delete_user
+    existing_user['_id']=str(existing_user._id)
+                             ^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute '_id'
+2025-05-05 22:33:20 - Log - INFO - Mongodb connected
+2025-05-05 22:33:37 - Log - INFO - Attempting to delete user with ID: 68190bb31a1c3b68372adf83
+2025-05-05 22:33:37 - Log - INFO - Successfully deleted user with ID: 68190bb31a1c3b68372adf83
+2025-05-05 22:34:15 - Log - INFO - Attempting to delete user with ID: 68190bb31a1c3b68372adf83
+2025-05-05 22:34:15 - Log - CRITICAL - Error deleting user 68190bb31a1c3b68372adf83: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/home/nati/Videos/projects/instagram_scraper/router/instagram_users.py", line 84, in delete_user
+    existing_user['_id']=str(existing_user["_id"])
+                             ~~~~~~~~~~~~~^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2025-05-05 22:34:46 - Log - INFO - Mongodb connected
+2025-05-05 22:34:49 - Log - INFO - Attempting to delete user with ID: 68190bb31a1c3b68372adf83
+2025-05-05 22:34:49 - Log - WARNING - User not found with ID: 68190bb31a1c3b68372adf83

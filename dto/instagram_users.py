@@ -8,3 +8,6 @@ class UserListResponse(BaseModel):
 
 class UserResponse(BaseModel):
     data: UserBase
+
+    
+

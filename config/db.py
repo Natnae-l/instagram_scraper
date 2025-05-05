@@ -1,13 +1,15 @@
+
 from pymongo.mongo_client import MongoClient
 from config.environments import settings
 from constants.constants import db_models
+from config.logger import logger
 
 
 client = MongoClient(settings.MONGO_URL)
 
 try:
     client.admin.command('ping')
-    print('Mongodb connected')
+    logger.info('Mongodb connected')
 except Exception as e:
     print(e)
 

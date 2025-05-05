@@ -28,6 +28,11 @@ class Settings(BaseSettings):
     FRONTEND_HOST: str
     API_V1_STR: str
     MONGO_URL: str
+    ROCKET_API_TOKEN: str
+    SCRAPE: bool = True
+    MAX_PAGES: int= 5
+    COUNT_PER_PAGE: int = 10
+    RUN_INTERVAL_PER_MINUTE: int
 
     DEFAULT_FRONTEND: Optional[str] = Field(default=None)
 
@@ -47,8 +52,13 @@ class Settings(BaseSettings):
         self._check_default_secret("FRONTEND_HOST", self.FRONTEND_HOST)
         self._check_default_secret("ENVIRONMENT", self.ENVIRONMENT)
         self._check_default_secret("PROJECT_NAME", self.PROJECT_NAME)
-        self._check_default_secret("API_V1_STR", self.PROJECT_NAME)
-        self._check_default_secret("MONGO_URL", self.PROJECT_NAME)
+        self._check_default_secret("API_V1_STR", self.API_V1_STR)
+        self._check_default_secret("MONGO_URL", self.MONGO_URL)
+        self._check_default_secret("ROCKET_API_TOKEN", self.ROCKET_API_TOKEN)
+        self._check_default_secret("SCRAPE", self.SCRAPE)
+        self._check_default_secret("MAX_PAGES", self.MAX_PAGES)
+        self._check_default_secret("COUNT_PER_PAGE", self.COUNT_PER_PAGE)
+        self._check_default_secret("RUN_INTERVAL_PER_MINUTE", self.RUN_INTERVAL_PER_MINUTE)
 
         return self
 
