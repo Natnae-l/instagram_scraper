@@ -1,0 +1,15 @@
+[project]
+name = "cloud-defense-tool"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.115.12",
+    "motor>=3.7.0",
+    "pydantic-settings>=2.9.1",
+    "pymongo>=4.12.1",
+    "rocketapi>=1.0.12",
+    "schedule>=1.2.2",
+    "slowapi>=0.1.9",
+]
