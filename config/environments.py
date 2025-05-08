@@ -30,9 +30,12 @@ class Settings(BaseSettings):
     MONGO_URL: str
     ROCKET_API_TOKEN: str
     SCRAPE: bool = True
-    MAX_PAGES: int= 5
+    MAX_PAGES: int = 5
     COUNT_PER_PAGE: int = 10
     RUN_INTERVAL_PER_MINUTE: int
+    MAX_THREADS: int = 4
+    MAX_RETRIES: int = 3
+    RETRY_DELAY: int = 5
 
     DEFAULT_FRONTEND: Optional[str] = Field(default=None)
 
@@ -58,7 +61,14 @@ class Settings(BaseSettings):
         self._check_default_secret("SCRAPE", self.SCRAPE)
         self._check_default_secret("MAX_PAGES", self.MAX_PAGES)
         self._check_default_secret("COUNT_PER_PAGE", self.COUNT_PER_PAGE)
-        self._check_default_secret("RUN_INTERVAL_PER_MINUTE", self.RUN_INTERVAL_PER_MINUTE)
+        self._check_default_secret(
+            "RUN_INTERVAL_PER_MINUTE", self.RUN_INTERVAL_PER_MINUTE)
+        self._check_default_secret(
+            "MAX_THREADS", self.RUN_INTERVAL_PER_MINUTE)
+        self._check_default_secret(
+            "MAX_RETRIES", self.RUN_INTERVAL_PER_MINUTE)
+        self._check_default_secret(
+            "RETRY_DELAY", self.RUN_INTERVAL_PER_MINUTE)
 
         return self
 

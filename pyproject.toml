@@ -12,4 +12,5 @@ dependencies = [
     "rocketapi>=1.0.12",
     "schedule>=1.2.2",
     "slowapi>=0.1.9",
+    "tenacity>=9.1.2",
 ]

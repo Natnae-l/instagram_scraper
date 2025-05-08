@@ -35,9 +35,8 @@ app.add_middleware(SlowAPIMiddleware)
 
 app.include_router(router)
 
-# Start the scheduler in a separate thread when the app starts
+
 @app.on_event("startup")
 async def startup_event():
     scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
     scheduler_thread.start()
-
