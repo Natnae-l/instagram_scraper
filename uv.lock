@@ -107,6 +107,7 @@ dependencies = [
     { name = "schedule" },
     { name = "slowapi" },
     { name = "tenacity" },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
@@ -119,6 +120,7 @@ requires-dist = [
     { name = "schedule", specifier = ">=1.2.2" },
     { name = "slowapi", specifier = ">=0.1.9" },
     { name = "tenacity", specifier = ">=9.1.2" },
+    { name = "uvicorn" },
 ]
 
 [[package]]
